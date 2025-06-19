@@ -1,5 +1,36 @@
 * {
+    /*reset impostazioni di default*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: white;
+    font-family: ;
+}
+
+/*#region main*/
+.container {
+    max-width: 1200px;
+    /*larghezza contenitore delle card*/
+    margin: auto;
+    width: 30%;
+    /*spazio da occupare*/
+}
+
+.card {
+    max-width: 100%;
+    /*si adatta sempre alla larghezza del contenitore senza mai superarla*/
+    width: 200px;
+    position: relative;
+
+    .badge_discount {
+        position: absolute;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+/*#endregion main*/
