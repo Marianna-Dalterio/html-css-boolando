@@ -7,14 +7,14 @@
 
 body {
     background-color: white;
-    font-family: ;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*#region main*/
 .container {
     max-width: 1200px;
     /*larghezza contenitore delle card*/
-    margin: auto;
+    margin: 50px auto;
     width: 30%;
     /*spazio da occupare*/
 }
@@ -25,12 +25,63 @@ body {
     width: 200px;
     position: relative;
 
-    .badge_discount {
-        position: absolute;
-        background-color: red;
-        color: white;
-        font-weight: bold;
+    .image {
+        display: block;
     }
+
+    .hover_image {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .card:hover.hover_image {
+        display: block;
+    }
+
+    .card:hover.image {
+        display: none;
+    }
+
+}
+
+/*creiamo una classe badges x definire la posizione*/
+.badges {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    gap: 5px;
+
+    /*badge x definire le altre caratteristiche comuni*/
+    .badge {
+        font-weight: bold;
+        color: white;
+        padding: 4px 8px;
+        font-size: large;
+    }
+
+    /*aggiungiamo solo le differenze*/
+    .badge_discount {
+        background-color: red;
+    }
+
+    .badge_sostenibilità {
+        background-color: green;
+    }
+}
+
+.icon {
+    position: absolute;
+    background-color: white;
+    font-size: x-large;
+    padding: 20px 20px;
+    top: 20px;
+    right: 0;
+    transform: translateX(440px);
+    /*translateX(...) ➜ sposta in orizzontale, translateY(...) ➜ sposta in verticale*/
+
 }
 
 /*#endregion main*/
