@@ -20,7 +20,7 @@ body {
 }
 
 .flex_container {
-    display: flex;
+    display: ;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -89,6 +89,25 @@ body {
     padding: 10px 10px;
     top: 10px;
     right: 0;
+}
+
+.card_bottom {
+    color: black;
+
+    .description {
+        text-transform: uppercase;
+    }
+}
+
+.price {
+    .discounted_price {
+        color: red;
+        font-weight: bold;
+    }
+
+    .original_price {
+        text-decoration: line-through;
+    }
 }
 
 /*#endregion main*/
