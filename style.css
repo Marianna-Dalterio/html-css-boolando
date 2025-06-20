@@ -10,19 +10,61 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*#region header*/
+.header {
+    background-color: orangered;
+    min-height: 50px;
+    margin-bottom: 2rem;
+    position: fixed;
+    width: 100%;
+    /*con fixed perde la sua larghezza, quindi gliela ridiamo*/
+    z-index: 100;
+    /*per non far sovrapporre le immagini che sono in relative*/
+}
+
+.flex_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 10px 0 10px;
+
+    .header_left,
+    .header_right {
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+    }
+}
+
+.logo {
+    max-width: 100%;
+    width: 150px;
+    height: auto;
+
+}
+
+
+
+/*#endregion header*/
 /*#region main*/
+
 .container {
     max-width: 1200px;
     /*larghezza contenitore delle card*/
-    margin: 50px auto;
-    width: 90%;
-    /*spazio da occupare*/
+    margin: 0 auto;
 }
 
 .flex_container {
-    display: ;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 5rem;
+    /*ci dà spazio dall'header*/
 }
 
 .card_top {
@@ -111,3 +153,15 @@ body {
 }
 
 /*#endregion main*/
+
+/*#region footer*/
+.footer {
+    background-color: rgba(0, 0, 0, 0.801);
+    min-height: 50px;
+    color: white;
+    margin-top: 3rem;
+
+}
+
+
+/*#endregion footer*/
