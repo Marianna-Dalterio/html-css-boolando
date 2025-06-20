@@ -15,51 +15,61 @@ body {
     max-width: 1200px;
     /*larghezza contenitore delle card*/
     margin: 50px auto;
-    width: 30%;
+    width: 90%;
     /*spazio da occupare*/
 }
 
-.card {
+.flex_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card_top {
     max-width: 100%;
     /*si adatta sempre alla larghezza del contenitore senza mai superarla*/
-    width: 200px;
+    width: 300px;
     position: relative;
 
     .image {
         display: block;
+        max-width: 100%;
+        position: relative;
     }
 
     .hover_image {
-        position: absolute;
+        position: ;
         display: none;
-        top: 0;
-        left: 0;
         width: 100%;
-    }
-
-    .card:hover.hover_image {
-        display: block;
-    }
-
-    .card:hover.image {
-        display: none;
     }
 
 }
 
+/*quando sei in class card_top in hover fai vedere hover_image*/
+/*fai attenzione a lasciare lo spazio dopo hover e scrivere fuori dal nesting*/
+.card_top:hover .hover_image {
+    display: block;
+}
+
+/*stesso e nascondi image*/
+.card_top:hover .image {
+    display: none;
+}
+
+
 /*creiamo una classe badges x definire la posizione*/
 .badges {
     position: absolute;
-    bottom: 100px;
+    bottom: 25px;
     display: flex;
-    gap: 5px;
+    gap: 2px;
 
     /*badge x definire le altre caratteristiche comuni*/
     .badge {
         font-weight: bold;
         color: white;
-        padding: 4px 8px;
-        font-size: large;
+        padding: 4px 5px;
+        font-size: 12px;
     }
 
     /*aggiungiamo solo le differenze*/
@@ -75,13 +85,10 @@ body {
 .icon {
     position: absolute;
     background-color: white;
-    font-size: x-large;
-    padding: 20px 20px;
-    top: 20px;
+    font-size: large;
+    padding: 10px 10px;
+    top: 10px;
     right: 0;
-    transform: translateX(440px);
-    /*translateX(...) ➜ sposta in orizzontale, translateY(...) ➜ sposta in verticale*/
-
 }
 
 /*#endregion main*/
